@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Avner-reg';
+  src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype'); /* Path to your font file */
+}
+
+@font-face {
+  font-family: 'Avner-bold';
+  src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype'); /* Path to your font file */
+}
+
+@font-face {
+  font-family: 'Avner-demi';
+  src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype'); /* Path to your font file */
+}
+
+
+
+.header {
+  text-align: center;
+  background-color: #323232;
+  padding: 2rem 2rem;
+}
+
+/* .content {
+  background-color: rgba(0, 0, 0, 0.5); 
+
+} */
+
+.content__image {
+  position: relative;
+  width: 100%; /* Set the width as per your layout requirement */
+  display: block;
+  /* opacity: 0.5;   */
+  /* background-color: rgba(0, 0, 0, 1);  */
+
+}
+
+.content__image-overlaytext {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for the height and width of the element itself */
+  color: white;
+  font-size: 30px;
+  font-family: 'Avner-demi', sans-serif;
+  padding-left: 10px; 
+  width: 80%; /* Adjust width as needed, or remove if you want the text width to be auto */
+  z-index: 1;
+  pointer-events: none; /* Ensures clicks go through the overlay */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #323232;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+.socials_logos {
+  list-style-type: none;
+  padding: 15px 0px;
+}
+
+.socials_logos li {
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;  /* This ensures all images are bound within their parent elements */
+  height: auto;  /* Maintain aspect ratio */
+}
+/* 
+css for mobile devices
+*/
+@media only screen and (max-width: 768px) {
+  .header {
+    text-align: center;
+    background-color: #323232;
+    padding: 2rem 2rem;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #323232;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: left;
+  }
+  
+  
+  .socials_logos {
+    list-style-type: none;
+    padding: 15px 0px;
+  }
+  
+  .socials_logos li {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+}
+
+
+
