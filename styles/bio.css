@@ -1,0 +1,397 @@
+@font-face {
+  font-family: "Avner-reg";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Avner-bold";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Avner-demi";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+
+/* HEADER SECTION  */
+@media screen and (max-width: 767px) {
+  .header {
+    text-align: center;
+    background-color: #323232;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+  .header img {
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: none;
+  }
+}
+
+/* NAVIGATION SECTION  */
+@media screen and (max-width: 767px) {
+  .navigator .navigator__list {
+    display: flex;
+    text-align: center;
+    padding: 1.5rem 1.5rem 0rem;
+    background-color: #323232;
+    list-style: none;
+    display: flex;
+    padding: 0rem;
+    align-items: center;
+    font-family: "Avner-reg";
+    justify-content: space-between;
+  }
+  .navigator .navigator__list .mobile_logo_img {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigator .navigator__list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding: 2rem;
+    background-color: #323232;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigator__item {
+    align-items: center;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigator__item {
+    margin-left: 7rem;
+  }
+  .navigator__item img {
+    padding: 0rem 4rem;
+    width: 18.75rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigator__link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.5;
+    padding: 0.5rem;
+    transition: font-weight 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigator__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.5;
+    padding: 0 1rem;
+    font-family: "Avner-reg";
+  }
+}
+.navigator__link:hover, .navigator__link:focus {
+  /* Styles when hovered or focused for accessibility */
+  font-weight: bold;
+  /* Makes the text bold */
+  border-bottom: 3px solid white;
+  /* Visible line under the text */
+  opacity: 1;
+}
+
+/* CONTENT SECTION  */
+.content__image {
+  position: relative;
+  width: 100%;
+  display: block;
+  opacity: 0.85;
+  /* 0.5 opacity doesn't match with the wireframe for mobile/desktop temple */
+  background-color: rgb(0, 0, 0);
+  /* Semi-transparent black */
+}
+
+@media screen and (max-width: 767px) {
+  .content__image-overlaytext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 80%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__image-overlaytext {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 80%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 5.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+.content__description {
+  position: relative;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  font-family: "Avner-demi";
+}
+@media screen and (min-width: 768px) {
+  .content__description .band_image {
+    text-align: center;
+  }
+  .content__description .band_image img {
+    width: 82rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content__description--title {
+    padding: 1rem 0rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__description--title {
+    padding: 2rem 10rem;
+    font-size: 3.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+.content__description--cite {
+  padding: 1rem 0rem;
+  line-height: 1.6;
+  font-style: normal;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 767px) {
+  .content__description--quote {
+    font-family: "Avner-demi";
+    padding: 1rem 0rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__description--quote {
+    font-family: "Avner-demi";
+    padding: 1rem 54rem 1rem 18rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+  .content__description--quote p {
+    margin-top: 1rem;
+  }
+  .content__description--quote p cite {
+    font-style: normal;
+    font-family: "Avner-reg";
+  }
+}
+
+.content__description--text {
+  line-height: 1.4;
+  font-family: "Avner-reg";
+}
+@media screen and (max-width: 767px) {
+  .content__description--text {
+    padding: 1rem 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__description--text {
+    padding: 2rem 17rem;
+  }
+  .content__description--text .content_desc_band {
+    display: flex;
+  }
+}
+.content__description--text .bees_knees_p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.gallery-section {
+  position: relative;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .gallery-section {
+    padding: 0rem 10rem;
+  }
+}
+
+.gallery-section__photos {
+  align-content: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery-section__photos .image_wrapper {
+    display: flex;
+  }
+  .gallery-section__photos .image_wrapper img {
+    padding: 0.5rem;
+    width: 500px;
+  }
+}
+
+.gallery-section__title {
+  padding: 1rem 0rem;
+  position: relative;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 1.5rem;
+  font-family: "Avner-demi";
+}
+@media screen and (min-width: 768px) {
+  .gallery-section__title {
+    font-size: 3.25rem;
+  }
+}
+
+.gallery-photo {
+  padding: 1rem 0rem;
+}
+
+.footer {
+  position: relative;
+  font-family: "Avner-reg";
+  bottom: 0;
+  width: 100%;
+  background-color: #323232;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .footer .footer_mobile {
+    display: none;
+  }
+}
+
+.footer__email {
+  color: white;
+  text-decoration: none;
+}
+.footer__email:hover, .footer__email:focus {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__title {
+  font-family: "Avner-demi";
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 1rem 0rem;
+}
+
+.footer__title--slim {
+  font-family: "Avner-reg";
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 0.5rem 0rem;
+}
+
+.footer__subheading {
+  font-family: "Avner-demi";
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 0.5rem 0rem;
+}
+
+.footer__subheading--info {
+  font-family: "Avner-reg";
+  font-size: 0.875rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 0.5rem 0rem;
+}
+
+.socials_logos {
+  list-style-type: none;
+  padding: 1rem 0rem;
+}
+.socials_logos li {
+  display: inline-flex;
+  margin-right: 2.5rem;
+}
+.socials_logos .facebook {
+  width: 1.3rem;
+}
+.socials_logos .instagram {
+  width: 2rem;
+}
+.socials_logos .twitter {
+  width: 2.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .footer_desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer_desktop {
+    display: flex;
+  }
+  .footer_desktop .git_text {
+    font-size: 3.25rem;
+  }
+  .footer_desktop .section_footer {
+    padding: 2rem;
+  }
+  .footer_desktop .section_footer .ele_2 {
+    padding-top: 2rem;
+    font-weight: bold;
+  }
+  .footer_desktop .section_footer .ele_3 {
+    padding-top: 2rem;
+  }
+  .footer_desktop .section_footer .ele_4 {
+    padding-top: 2rem;
+  }
+}
