@@ -118,6 +118,7 @@
 
 .content__description--text {
   padding: 1rem 0rem;
+  line-height: 1.4;
   font-family: "Avner-reg";
 }
 
@@ -138,8 +139,6 @@
   font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 43.75rem;
-  /* text-align: center; */
-  font-size: 1.5rem;
   /* Large font size for the title */
   padding: 1.5rem;
   font-family: "Avner-demi";
@@ -174,7 +173,7 @@
   font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 43.75rem;
-  padding: 0.5rem 0rem;
+  padding: 1rem 0rem;
 }
 
 .footer__title--slim {
@@ -212,7 +211,6 @@
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
@@ -254,4 +252,4 @@ css for mobile devices
     display: inline-flex;
     margin-right: 10px;
   } */
-}
+}/*# sourceMappingURL=bio.css.map */
