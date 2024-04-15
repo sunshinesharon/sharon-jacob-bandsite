@@ -2,21 +2,17 @@
   font-family: 'Avner-reg';
   src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format("opentype");
 
-  /* Path to your font file */
 }
 
 @font-face {
   font-family: 'Avner-bold';
   src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format("opentype");
 
-  /* Path to your font file */
 }
 
 @font-face {
   font-family: 'Avner-demi';
   src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format("opentype");
-
-  /* Path to your font file */
 }
 
 /* HEADER SECTION  */
@@ -27,7 +23,6 @@
   padding: 1rem;
   background-size: cover;
 
-  /* or 'contain' depending on the desired effect */
   background-position: center;
 
   img {
@@ -35,12 +30,6 @@
   }
 }
 
-/* .header__responsive-image {
-  max-width: 100%; 
-  height: auto; 
-  display:block; 
-  align-content: center;
-} */
 
 /* NAVIGATION SECTION  */
 
@@ -92,7 +81,6 @@
   position: relative;
   width: 100%;
 
-  /* Set the width as per your layout requirement */
   display: block;
   opacity: 0.85;
 
@@ -106,23 +94,18 @@
   position: absolute;
   top: 50%;
 
-  /* Center vertically */
   left: 50%;
 
-  /* Center horizontally */
   transform: translate(-50%, -50%);
 
-  /* Adjust for the height and width of the element itself */
   color: white;
   font-family: 'Avner-demi';
   padding-left: 0.5rem;
   width: 80%;
 
-  /* Adjust width as needed, or remove if you want the text width to be auto */
   z-index: 1;
   pointer-events: none;
 
-  /* Ensures clicks go through the overlay */
   font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 43.75rem;
@@ -131,10 +114,8 @@
 .content__description {
   position: relative;
 
-  /* text-align: center; */
   font-size: 1.5rem;
 
-  /* Large font size for the title */
   padding: 1.5rem;
   font-family: 'Avner-demi';
 }
@@ -204,18 +185,14 @@
 .footer__email {
   color: white;
 
-  /* Sets the text color to white */
   text-decoration: none;
 
-  /* Removes the underline */
 
   &:hover, &:focus {
     text-decoration: none;
 
-    /* Keeps the text decoration as 'none' even on hover/focus */
     color: white;
 
-    /* Maintains the text color on hover/focus */
   }
 }
 
@@ -267,10 +244,8 @@
   box-sizing: border-box;
   max-width: 100%;
 
-  /* This ensures all images are bound within their parent elements */
   height: auto;
 
-  /* Maintain aspect ratio */
 
   &::before, &::after {
     margin: 0;
@@ -278,10 +253,7 @@
     box-sizing: border-box;
     max-width: 100%;
 
-    /* This ensures all images are bound within their parent elements */
     height: auto;
-
-    /* Maintain aspect ratio */
   }
 }
 
