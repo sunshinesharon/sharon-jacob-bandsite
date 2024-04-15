@@ -12,15 +12,18 @@
 <body>
 
     <header class="header">
-        <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo" class="header__responsive-image"/>
+        <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo" class="header__responsive-image" />
     </header>
-    
+
     <nav class="navigator">
         <ul class="navigator__list">
-          <li class="navigator__item"><a href="#biography" class="navigator__link">Biography</a></li>
-          <li class="navigator__item"><a href="#shows" class="navigator__link">Shows</a></li>
+            <li class="navigator__item mobile_logo_img">
+                <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo">
+            </li>
+            <li class="navigator__item"><a href="#biography" class="navigator__link">Biography</a></li>
+            <li class="navigator__item"><a href="#shows" class="navigator__link">Shows</a></li>
         </ul>
-    </nav>        
+    </nav>
 
     <section class="content__image">
         <!-- <h1 class="content__title">The Bees Knees</h1> -->
@@ -31,86 +34,146 @@
 
     <section class="content__description">
         <h2 class="content__description--title">About the Musicians</h2>
-        <img src="./assets/images/band.jpg" alt="Concert photo" class="content__description--image">
-       
+        <div class="band_image">
+            <img src="./assets/images/band.jpg" alt="Concert photo" class="content__description--image">
+        </div>
+
         <blockquote class="content__description--quote">
-          “We push each other to be the best. It's not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”
-          <p>
-              <cite class="content__description--cite">- Lead vocalist of The Bees Knees</cite>
-          </p>
+            “We push each other to be the best. It's not uncommon for one of us to say ‘this needs to be better, back to
+            the drawing board’”
+            <p>
+                <cite class="content__description--cite">- Lead vocalist of The Bees Knees</cite>
+            </p>
         </blockquote>
 
         <div class="content__description--text">
-          <p><strong><b>The Bees Knees</b></strong></p> <br>
-          <p>
-            The Bees Knees is a pop rock band originating from San Francisco, California. The band consists a dynamic lineup featuring two lead vocalists, two guitarists, a bassist, a keyboardist and a drummer. The band achieved its first commercial success as an unsigned act, drawing attention from their future manager. Having extensive experience working with both new and seasoned acts, the manager was confident the band could succeed even further with more support, pushing The Bees Knees to sign with a well known record label.
-          </p>
-          <br><p>
-            From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band's original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as "The Hive" and are drawn to their candid and authentic performances on stage. The Bees Knees are currently recording their second studio album, looking to be released in early 2024.
-        </p>
+            <p class="bees_knees_p"><strong><b>The Bees Knees</b></strong></p> <br>
+            <div class="content_desc_band">
+                <p>
+                    The Bees Knees is a pop rock band originating from San Francisco, California. The band consists a
+                    dynamic lineup featuring two lead vocalists, two guitarists, a bassist, a keyboardist and a drummer.
+                    The
+                    band achieved its first commercial success as an unsigned act, drawing attention from their future
+                    manager. Having extensive experience working with both new and seasoned acts, the manager was
+                    confident
+                    the band could succeed even further with more support, pushing The Bees Knees to sign with a well
+                    known
+                    record label.
+                </p>
+                <br>
+                <p>
+                    From there, the band has soared, gaining international recognition and ranking in the top 10 on the
+                    Poster Charts. New fans immediately fell in love with the band's original and organic attitude,
+                    solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans
+                    affectionately refer to themselves as "The Hive" and are drawn to their candid and authentic
+                    performances on stage. The Bees Knees are currently recording their second studio album, looking to
+                    be
+                    released in early 2024.
+                </p>
+            </div>
         </div>
-        
+
     </section>
-      
+
     <section class="gallery-section">
         <h2 class="gallery-section__title">Photo Gallery</h2>
         <div class="gallery-section__photos">
-          <img src="./assets/images/Photo-gallery-1.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-2.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-3.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-4.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-5.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-9.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-7.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-8.jpg" alt="Concert Photo" class="gallery-photo">
-          <img src="./assets/images/Photo-gallery-6.jpg" alt="Concert Photo" class="gallery-photo">
+            <div class="image_wrapper">
+                <img src="./assets/images/Photo-gallery-1.jpg" alt="Concert Photo" class="gallery-photo">
+                <img src="./assets/images/Photo-gallery-2.jpg" alt="Concert Photo" class="gallery-photo">
+                <img src="./assets/images/Photo-gallery-3.jpg" alt="Concert Photo" class="gallery-photo">
+            </div>
+
+            <div class="image_wrapper">
+                <img src="./assets/images/Photo-gallery-4.jpg" alt="Concert Photo" class="gallery-photo">
+                <img src="./assets/images/Photo-gallery-5.jpg" alt="Concert Photo" class="gallery-photo">
+                <img src="./assets/images/Photo-gallery-9.jpg" alt="Concert Photo" class="gallery-photo">
+            </div>
+            <div class="image_wrapper">
+                <img src="./assets/images/Photo-gallery-7.jpg" alt="Concert Photo" class="gallery-photo">
+                <img src="./assets/images/Photo-gallery-8.jpg" alt="Concert Photo" class="gallery-photo">
+                <img src="./assets/images/Photo-gallery-6.jpg" alt="Concert Photo" class="gallery-photo">
+            </div>
         </div>
-      </section>
+    </section>
 
     <footer class="footer">
-        <div class="footer__title">
-            Get in Touch
-        </div>
-        <ul class="socials_logos">
-            <li>
-                <a href="">
-                    <img src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram">
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook">
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter">
-                </a>
-            </li>
-        </ul>
-  
-        <h3 class="footer__subheading">The Bees Knees Management</h3>
-        <p>
-            503 Broadway Penthouse, <br>
-            New York, NY 10012, USA
-        </p>
-        <br>
-        <a href="mailto:info@thebeesknees.com" class="footer__email">info@thebeesknees.com</a><br><br>
-
-
-        <h3 class="footer__subheading">Limitless Artist Group</h3>
-        <p class="footer__subheading--info">Booking Agent for US / South America / Japan</p>
-        <a href="mailto:bookings@limitlessag.com" class="footer__email">bookings@limitlessag.com</a><br><br>
+        <div class="footer_mobile">
+            <div class="footer__title">
+                Get in Touch
+            </div>
+            <ul class="socials_logos">
+                <li>
+                    <a href="">
+                        <img src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram" class="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook" class="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter" class="twitter">
+                    </a>
+                </li>
+            </ul>
     
-        <h3 class="footer__subheading">ARCH Entertainment</h3>
-        <p class="footer__subheading--info">Booking Agent for UK / EU / AU</p>
-        <a href="mailto:bookings@archentertainment.com" class="footer__email">bookings@archentertainment.com</a><br>
-        <br><br>
-        <div class="footer__title--slim">
-            <strong>BANDSITE</strong>
-            <p class="footer__subheading--info">Copyright The Bees Knees © 2023 All Rights Reserved</p>
+            <h3 class="footer__subheading">The Bees Knees Management</h3>
+            <p>
+                503 Broadway Penthouse, <br>
+                New York, NY 10012, USA
+            </p>
+            <br>
+            <a href="mailto:info@thebeesknees.com" class="footer__email">info@thebeesknees.com</a><br><br>
+    
+    
+            <h3 class="footer__subheading">Limitless Artist Group</h3>
+            <p class="footer__subheading--info">Booking Agent for US / South America / Japan</p>
+            <a href="mailto:bookings@limitlessag.com" class="footer__email">bookings@limitlessag.com</a><br><br>
+    
+            <h3 class="footer__subheading">ARCH Entertainment</h3>
+            <p class="footer__subheading--info">Booking Agent for UK / EU / AU</p>
+            <a href="mailto:bookings@archentertainment.com" class="footer__email">bookings@archentertainment.com</a><br>
+            <br><br>
+            <div class="footer__title--slim">
+                <strong>BANDSITE</strong>
+                <p class="footer__subheading--info">Copyright The Bees Knees © 2023 All Rights Reserved</p>
+            </div>
         </div>
-        
+        <div class="footer_desktop">
+            <div class="section_footer">
+                <p class="1_ele git_text">Get in Touch</p>
+                <p class="ele_2">The Bees Knees Management</p>
+                <p class="ele_3">503 Broadway Penthouse, <br>New York, NY 10012, USA</p>
+                <p class="ele_4">info@thebeesknees.com</p>
+            </div>
+            <div class="section_footer">
+                <div>
+                    <ul class="socials_logos">
+                        <li>
+                            <a href="">
+                                <img src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram" class="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook" class="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter" class="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="ele_2">Limitless Artist Group</p>
+                <p class="ele_3">Booking Agent for <br> USA/ South America/ Japan</p>
+                <p class="ele_4">bookings@limitlessag.com</p>
+            </div>
+        </div>
     </footer>
 
 

@@ -1,3 +1,6 @@
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
 @font-face {
   font-family: 'Avner-reg';
   src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format("opentype");
@@ -15,18 +18,44 @@
   src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format("opentype");
 }
 
-/* HEADER SECTION  */
+* {
+  margin: 0;
+  // padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
 
+  height: auto;
+
+
+  &::before, &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+
+    height: auto;
+  }
+}
+
+
+/* HEADER SECTION  */
 .header {
+
+  @include mobile {
+  
   text-align: center;
   background-color: #323232;
   padding: 1rem;
   background-size: cover;
-
   background-position: center;
 
   img {
     width: 10rem;
+  }
+  }
+
+  @include desktop {
+    display: none;
   }
 }
 
@@ -34,34 +63,70 @@
 /* NAVIGATION SECTION  */
 
 .navigator .navigator__list {
-  display: flex;
-  text-align: center;
-  padding: 1.5rem 1.5rem 0rem;
-  background-color: #323232;
-  list-style: none;
-  display: flex;
-  padding: 0rem;
-  align-items: center;
-  font-family: 'Avner-reg';
-  justify-content: space-between;
+
+  @include mobile {
+    display: flex;
+    text-align: center;
+    padding: 1.5rem 1.5rem 0rem;
+    background-color: #323232;
+    list-style: none;
+    display: flex;
+    padding: 0rem;
+    align-items: center;
+    font-family: 'Avner-reg';
+    justify-content: space-between;
+    .mobile_logo_img {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding: 2rem;
+    background-color: #323232;
+  }
 }
 
 .navigator__item {
-  align-items: center;
-  flex: 1;
+  @include mobile {
+    align-items: center;
+    flex: 1;
+  }
+
+  @include desktop {
+    margin-left: 7rem;
+    img { 
+      padding: 0rem 4rem;
+      width: 18.75rem;
+    }
+  }
 }
 
 .navigator__link {
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: normal;
-  opacity: 0.5;
-  padding: 0.5rem;
-  transition: font-weight 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 3px solid transparent;
-  margin-bottom: 0rem;
+  @include mobile {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.5;
+    padding: 0.5rem;
+    transition: font-weight 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 0rem;
+  }
+  
+  @include desktop {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.5;
+    padding: 0 1rem;
+    font-family: 'Avner-reg';
+  }
 
   &:hover, &:focus {
     /* Styles when hovered or focused for accessibility */
@@ -91,57 +156,119 @@
 }
 
 .content__image-overlaytext {
-  position: absolute;
-  top: 50%;
 
-  left: 50%;
+  @include mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Avner-demi';
+    padding-left: 0.5rem;
+    width: 80%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+  }
 
-  transform: translate(-50%, -50%);
-
-  color: white;
-  font-family: 'Avner-demi';
-  padding-left: 0.5rem;
-  width: 80%;
-
-  z-index: 1;
-  pointer-events: none;
-
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-  font-weight: 43.75rem;
+  @include desktop {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 80%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 5.5rem;
+    line-height: 2.75rem;
+  }
 }
 
 .content__description {
   position: relative;
-
   font-size: 1.5rem;
-
   padding: 1.5rem;
   font-family: 'Avner-demi';
+  @include desktop {
+    .band_image {
+      text-align: center;
+      img {
+        width: 82rem;
+      }
+    }
+  }
 }
 
 .content__description--title {
-  padding: 1rem 0rem;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-  font-weight: 43.75rem;
+  
+  @include mobile { 
+    padding: 1rem 0rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+  }
+
+  @include desktop {
+    padding: 2rem 10rem;
+    font-size: 3.25rem;
+    line-height: 2.75rem;
+  }
 }
 
 .content__description--cite {
   padding: 1rem 0rem;
-  line-height: 1.6; 
+  line-height: 1.6;
+  font-style: normal; 
   margin: 1rem 0;
 }
 
 .content__description--quote {
-  font-family: 'Avner-demi';
-  padding: 1rem 0rem;
-  line-height: 1.6; 
-  margin: 1rem 0;
+
+  @include mobile {
+    font-family: 'Avner-demi';
+    padding: 1rem 0rem;
+    line-height: 1.6; 
+    margin: 1rem 0;
+  }
+
+  @include desktop {
+    font-family: "Avner-demi";
+    padding: 1rem 54rem 1rem 18rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    
+    p {
+      margin-top: 1rem;
+      cite {
+        font-style: normal;
+        font-family: "Avner-reg";
+      }
+    }
+  }
 }
 
 .content__description--text {
-  padding: 1rem 0rem;
+
+  @include mobile {
+    padding: 1rem 0rem;
+  }
+  
+  @include desktop {
+    padding: 2rem 17rem;
+    .content_desc_band {
+      display: flex;
+    }
+  }
+  .bees_knees_p {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
   line-height: 1.4; 
   font-family: 'Avner-reg';
 }
@@ -149,12 +276,26 @@
 .gallery-section {
   position: relative;
   background-color: #FAFAFA;
+
+  @include desktop {
+    padding: 0rem 10rem;
+  }
 }
 
 .gallery-section__photos {
   align-content: center;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+
+  @include desktop {
+    .image_wrapper {
+      display: flex;
+      img {
+        padding: 0.5rem;
+        width: 500px;
+      }
+    }
+  }
 }
 
 .gallery-section__title {
@@ -163,10 +304,12 @@
   font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 43.75rem;
-
-  /* Large font size for the title */
   padding: 1.5rem;
   font-family: 'Avner-demi';
+
+  @include desktop {
+    font-size: 3.25rem;
+  }
 }
 
 .gallery-photo {
@@ -182,6 +325,12 @@
   color: white;
   padding: 1rem 2rem;
   text-align: left;
+
+  .footer_mobile {
+    @include desktop {
+      display: none;
+    }
+  }
 }
 
 .footer__email {
@@ -236,57 +385,51 @@
 
   li {
     display: inline-flex;
-    margin-right: 10px;
+    margin-right: 2.5rem;
+  }
+  
+  .facebook {
+    width: 1.3rem;
+  }
+
+  .instagram {
+    width: 2rem;
+  }
+
+  .twitter {
+    width: 2.5rem
   }
 }
 
-* {
-  margin: 0;
-  // padding: 0;
-  box-sizing: border-box;
-  max-width: 100%;
 
-  height: auto;
-
-
-  &::before, &::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 100%;
-
-    height: auto;
+.footer_desktop {
+  @include mobile {
+    display: none;
   }
+  
+  @include desktop {
+    display: flex;
+    .git_text {
+      font-size: 3.25rem;
+    }
+
+    .section_footer {
+      padding: 2rem;
+      .ele_2 {
+        padding-top: 2rem;
+        font-weight: bold;
+      }
+
+      .ele_3 {
+        padding-top: 2rem;
+      }
+      .ele_4 {
+        padding-top: 2rem;
+      }
+    }
+    
+  }
+
 }
 
-/* 
-css for mobile devices
-*/
-@media only screen and (max-width: 768px) {
-  /* .header {
-    text-align: center;
-    background-color: #323232;
-    padding: 2rem 2rem;
-  } */
 
-  /* .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #323232;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: left;
-  }
-  
-  
-  .socials_logos {
-    list-style-type: none;
-    padding: 15px 0px;
-  }
-  
-  .socials_logos li {
-    display: inline-flex;
-    margin-right: 10px;
-  } */
-}
