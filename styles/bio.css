@@ -37,7 +37,7 @@
     width: 10rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header {
     display: none;
   }
@@ -61,7 +61,7 @@
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .navigator .navigator__list {
     list-style-type: none;
     margin: 0;
@@ -77,10 +77,7 @@
     flex: 1;
   }
 }
-@media screen and (min-width: 768px) {
-  .navigator__item {
-    margin-left: 7rem;
-  }
+@media screen and (min-width: 1024px) {
   .navigator__item img {
     padding: 0rem 4rem;
     width: 18.75rem;
@@ -101,7 +98,7 @@
     margin-bottom: 0rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .navigator__link {
     color: white;
     text-decoration: none;
@@ -149,7 +146,7 @@
     font-weight: 43.75rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .content__image-overlaytext {
     position: absolute;
     top: 43%;
@@ -172,12 +169,12 @@
   padding: 1.5rem;
   font-family: "Avner-demi";
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .content__description .band_image {
     text-align: center;
   }
   .content__description .band_image img {
-    width: 82rem;
+    width: 75%;
   }
 }
 
@@ -189,9 +186,9 @@
     font-weight: 43.75rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .content__description--title {
-    padding: 2rem 10rem;
+    padding: 2rem 5%;
     font-size: 3.25rem;
     line-height: 2.75rem;
   }
@@ -212,12 +209,12 @@
     margin: 1rem 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .content__description--quote {
     font-family: "Avner-demi";
-    padding: 1rem 54rem 1rem 18rem;
     line-height: 1.6;
     margin: 1rem 0;
+    padding: 0 12%;
   }
   .content__description--quote p {
     margin-top: 1rem;
@@ -237,12 +234,15 @@
     padding: 1rem 0rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .content__description--text {
-    padding: 2rem 17rem;
+    padding: 2rem 12%;
   }
   .content__description--text .content_desc_band {
     display: flex;
+  }
+  .content__description--text .content_desc_band p {
+    padding: 0 0.5rem;
   }
 }
 .content__description--text .bees_knees_p {
@@ -254,9 +254,9 @@
   position: relative;
   background-color: #FAFAFA;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .gallery-section {
-    padding: 0rem 10rem;
+    padding: 0rem 0rem;
   }
 }
 
@@ -265,13 +265,20 @@
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
-@media screen and (min-width: 768px) {
+.gallery-section__photos .image_wrapper img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.gallery-section__photos .image_wrapper img:hover {
+  filter: grayscale(0%);
+}
+@media screen and (min-width: 1024px) {
   .gallery-section__photos .image_wrapper {
-    display: flex;
+    text-align: center;
   }
   .gallery-section__photos .image_wrapper img {
     padding: 0.5rem;
-    width: 500px;
+    width: 30%;
   }
 }
 
@@ -284,9 +291,12 @@
   padding: 1.5rem;
   font-family: "Avner-demi";
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .gallery-section__title {
     font-size: 3.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 5%;
   }
 }
 
@@ -304,7 +314,7 @@
   padding: 1rem 2rem;
   text-align: left;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer .footer_mobile {
     display: none;
   }
@@ -374,7 +384,7 @@
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer_desktop {
     display: flex;
   }
@@ -393,5 +403,16 @@
   }
   .footer_desktop .section_footer .ele_4 {
     padding-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .copy-write-desktop {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .copy-write-desktop {
+    display: none;
   }
 }
