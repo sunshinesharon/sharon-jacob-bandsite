@@ -104,16 +104,20 @@
 }
 
 .content__description--cite {
-  padding: 1rem 1rem;
+  padding: 1rem 0rem;
+  line-height: 1.6;
+  margin: 1rem 0;
 }
 
 .content__description--quote {
   font-family: "Avner-demi";
-  padding: 1rem;
+  padding: 1rem 0rem;
+  line-height: 1.6;
+  margin: 1rem 0;
 }
 
 .content__description--text {
-  margin-bottom: 1rem;
+  padding: 1rem 0rem;
   font-family: "Avner-reg";
 }
 
@@ -199,7 +203,7 @@
 
 .socials_logos {
   list-style-type: none;
-  padding: 15px 0px;
+  padding: 1rem 0rem;
 }
 .socials_logos li {
   display: inline-flex;
