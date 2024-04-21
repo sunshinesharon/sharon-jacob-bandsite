@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite</title>
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src="./scripts/index-page.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo">
             </li>
             <li class="navigator__item"><a href="#biography" class="navigator__link">Biography</a></li>
-            <li class="navigator__item"><a href="#shows" class="navigator__link">Shows</a></li>
+            <li class="navigator__item"><a href="./pages/shows.html" class="navigator__link">Shows</a></li>
         </ul>
     </nav>
 
@@ -97,6 +98,42 @@
         </div>
     </section>
 
+    <section class="comments-section">
+        <h2 class="comments-section_title">Join the Conversation</h2>
+        <form class="comments-section_form" id="comment-form"> 
+            <div class="comments-section__form__profile">
+                <div class="comments-section__form__profile__image"></div>
+                <!-- <img src="./assets/images/Mohan-muruge.jpg" class="comments-section__form__profile__image" alt="comment-user-logo"> -->
+            </div>
+            <div class="comments-section__form__content">
+                <div class="comments-section__form__field">
+                    <label for="name">NAME</label>
+                    <input type="text" id="comment-name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="comments-section__form__field">
+                    <label for="email">COMMENT</label>
+                    <textarea rows="4" type="text" id="comment-text" name="commentText" required placeholder="Add a new comment"></textarea>
+                </div>
+                <input type="submit" value="COMMENT" class="comments-section_form_button">
+            </div>
+        </form>
+        <div class="comments-section_content" id="comments-ontainer">
+            <hr>
+            <!-- <div class="comments-section__content__card">
+                <div class="comments-section__content__profile">
+                    <span></span>
+                </div>
+                <div class="comments-section__content__info">
+                    <div class="comments-section__content__info__header">
+                        <p class="comments-section__content__info__username">Mr. ABC</p>
+                        <p class="comments-section__content__info__timestamp"> 12 Mar 2020</p>
+                    </div>
+                    <p class="comments-section__content__info__comment">dcwckmnvrw</p>
+                </div>
+                </div> -->
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer_mobile">
             <div class="footer__title">
@@ -138,7 +175,9 @@
             <a href="mailto:bookings@archentertainment.com" class="footer__email">bookings@archentertainment.com</a><br>
             <br><br>
             <div class="footer__title--slim">
-                <strong>BANDSITE</strong>
+                <div class="footer_logo">
+                    <img src="./assets/logos/Logo-bandsite.svg" alt="footer-logo">
+                </div>
                 <p class="footer__subheading--info">Copyright The Bees Knees © 2023 All Rights Reserved</p>
             </div>
         </div>
