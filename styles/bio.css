@@ -24,6 +24,103 @@
   height: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .sectionHeader, .comments-section__title, .gallery-section__title, .content__description--title {
+    font-family: "Avner-bold";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sectionHeader, .comments-section__title, .gallery-section__title, .content__description--title {
+    font-family: "Avner-reg";
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionHeader, .comments-section__title, .gallery-section__title, .content__description--title {
+    font-family: "Avner-reg";
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+
+.avatar, .comments-section__form__profile__image, .comments-section__content__profile span {
+  border-radius: 50%;
+}
+@media screen and (max-width: 767px) {
+  .avatar, .comments-section__form__profile__image, .comments-section__content__profile span {
+    height: 36px;
+    width: 36px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .avatar, .comments-section__form__profile__image, .comments-section__content__profile span {
+    height: 48px;
+    width: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .avatar, .comments-section__form__profile__image, .comments-section__content__profile span {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.buttonText {
+  font-family: "Avner-bold";
+}
+@media screen and (max-width: 767px) {
+  .buttonText {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) {
+  .buttonText {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buttonText {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+
+.labelText {
+  font-family: "Avner-bold";
+}
+@media screen and (max-width: 767px) {
+  .labelText {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) {
+  .labelText {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .labelText {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+
 /* HEADER SECTION  */
 @media screen and (max-width: 767px) {
   .header {
@@ -71,11 +168,17 @@
     list-style-type: none;
     margin: 0;
     display: flex;
-    padding: 2rem;
     background-color: #323232;
+    height: 90px;
+    align-items: center;
   }
 }
 
+.navigator__item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 767px) {
   .navigator__item {
     align-items: center;
@@ -83,12 +186,20 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .navigator__item {
+    margin-right: 1rem;
+  }
   .navigator__item img {
     padding: 0rem 4rem;
     width: 18.75rem;
   }
 }
 
+.navigator__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 767px) {
   .navigator__link {
     display: block;
@@ -110,11 +221,11 @@
     font-size: 1.5rem;
     font-weight: normal;
     opacity: 0.5;
-    padding: 0 1rem;
+    margin: 0 1rem;
     font-family: "Avner-reg";
   }
 }
-.navigator__link:hover, .navigator__link:focus {
+.navigator__link:hover, .navigator__link:focus, .navigator__link.active {
   font-weight: bold;
   border-bottom: 3px solid white;
   opacity: 1;
@@ -129,6 +240,87 @@
   /* 0.5 opacity doesn't match with the wireframe for mobile/desktop temple */
   background-color: rgb(0, 0, 0);
   /* Semi-transparent black */
+}
+
+.content__image-overlayplayer__bandname {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Avner-reg";
+}
+
+@media screen and (max-width: 767px) {
+  .content__image-overlayplayer__songtitle {
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__image-overlayplayer__songtitle {
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__image-overlayplayer__songtitle {
+    line-height: 6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content__image-overlayplayer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__image-overlayplayer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 3.5rem;
+    line-height: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__image-overlayplayer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 5.5rem;
+    line-height: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -199,16 +391,11 @@
 @media screen and (max-width: 767px) {
   .content__description--title {
     padding: 1rem 0rem;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 43.75rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .content__description--title {
     padding: 2rem 5%;
-    font-size: 3.25rem;
-    line-height: 2.75rem;
   }
 }
 
@@ -301,17 +488,10 @@
 }
 
 .gallery-section__title {
-  padding: 1rem 0rem;
-  position: relative;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-  font-weight: 43.75rem;
   padding: 1.5rem;
-  font-family: "Avner-demi";
 }
 @media screen and (min-width: 1024px) {
   .gallery-section__title {
-    font-size: 3.25rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-left: 5%;
@@ -320,6 +500,133 @@
 
 .gallery-photo {
   padding: 1rem 0rem;
+}
+
+.comments-section {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .comments-section {
+    padding: 2rem 0rem;
+    margin: 0 6%;
+  }
+}
+
+.comments-section__content {
+  font-size: 1.1rem;
+}
+.comments-section__content hr {
+  margin: 1.5rem;
+}
+
+.comments-section__content__card {
+  display: flex;
+  margin: 1.5rem 0;
+  border-top: 1px solid #E1E1E1;
+  padding-top: 1rem;
+}
+.comments-section__content__card:last-child {
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 1rem;
+}
+
+.comments-section__content__info {
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.comments-section__content__info__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.comments-section__content__info__comment {
+  font-family: "Avner-reg";
+}
+
+.comments-section__content__info__username {
+  font-family: "Avner-demi";
+}
+
+.comments-section__content__info__timestamp {
+  font-family: "Avner-reg";
+  color: #AFAFAF;
+}
+
+.comments-section__content__profile span {
+  display: block;
+  background-color: #E1E1E1;
+}
+
+.comments-section__form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.comments-section__form__content {
+  width: 100%;
+  margin-left: 1.5rem;
+}
+
+.comments-section__form,
+.comments-section__content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comments-section__form__field {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.comments-section__form__field input,
+.comments-section__form__field textarea {
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #E1E1E1;
+  background: #FAFAFA;
+  font-size: 1rem;
+  font-family: "Avner-reg";
+}
+.comments-section__form__field label {
+  font-size: 0.8rem;
+  font-family: "Avner-reg";
+  color: #AFAFAF;
+  margin: 0.3rem 0;
+  font-weight: 600;
+}
+
+.comments-section__form__profile__image {
+  background: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  margin-top: 3rem;
+}
+
+.comments-section__form__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #323232;
+  color: #FFFFFF;
+  font-family: "Avner-reg";
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .comments-section__form__button {
+    max-width: 200px;
+    float: right;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .comments-section__form__button {
+    max-width: 200px;
+    float: right;
+  }
 }
 
 .footer {
@@ -425,6 +732,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .footer_logo {
+    padding: 2rem 0 0 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
   .copy-write-desktop {
     padding: 2rem;
   }
@@ -434,3 +746,5 @@
     display: none;
   }
 }
+
+/*# sourceMappingURL=bio.css.map */
