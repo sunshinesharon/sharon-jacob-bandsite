@@ -1,0 +1,561 @@
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+@font-face {
+    font-family: 'Avner-reg';
+    src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format("opentype");
+
+}
+
+@font-face {
+    font-family: 'Avner-bold';
+    src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format("opentype");
+
+}
+
+@font-face {
+    font-family: 'Avner-demi';
+    src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format("opentype");
+}
+
+* {
+    margin: 0;
+    // padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+
+    height: auto;
+
+
+    &::before,
+    &::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 100%;
+
+        height: auto;
+    }
+}
+
+
+/* HEADER SECTION  */
+.header {
+
+    @include mobile {
+
+        text-align: center;
+        background-color: #323232;
+        padding: 1rem;
+        background-size: cover;
+        background-position: center;
+
+        img {
+            width: 10rem;
+        }
+    }
+
+    @include desktop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+
+/* NAVIGATION SECTION  */
+
+.navigator .navigator__list {
+    @include mobile {
+        display: flex;
+        text-align: center;
+        padding: 1.5rem 1.5rem 0rem;
+        background-color: #323232;
+        list-style: none;
+        display: flex;
+        padding: 0rem;
+        align-items: center;
+        font-family: 'Avner-reg';
+        justify-content: space-between;
+
+        .mobile_logo_img {
+            display: none;
+        }
+    }
+
+    @include tablet {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        // padding: 2rem;
+        background-color: #323232;
+        height: 90px;
+        align-items: center;
+    }
+}
+
+.navigator__item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+        align-items: center;
+        flex: 1;
+    }
+
+    @include tablet {
+        margin-right: 1rem;
+
+        img {
+            padding: 0rem 4rem;
+            width: 18.75rem;
+        }
+    }
+}
+
+.navigator__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: normal;
+        opacity: 0.5;
+        padding: 0.5rem;
+        transition: font-weight 0.3s ease, border-bottom 0.3s ease;
+        border-bottom: 3px solid transparent;
+        margin-bottom: 0rem;
+    }
+
+    @include tablet {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: normal;
+        opacity: 0.5;
+        margin: 0 1rem;
+        font-family: 'Avner-reg';
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+        font-weight: bold;
+        border-bottom: 3px solid white;
+        opacity: 1;
+    }
+}
+
+/* CONTENT SECTION  */
+
+.content__image {
+    position: relative;
+    width: 100%;
+
+    display: block;
+    opacity: 0.85;
+    
+    /* 0.5 opacity doesn't match with the wireframe for mobile/desktop temple */
+    background-color: $BandSite-DarkBlack;
+    /* Semi-transparent black */
+}
+
+.content__image__container {
+    position: relative;
+
+    @include desktop {
+        max-height: 90vh;
+        overflow: hidden;
+    }
+}
+
+.content__image-overlayplayer__bandname {
+    @include mobile {
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: 'Avner-reg';
+    }
+
+    @include media(tablet, desktop) {
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: 'Avner-demi';
+    }
+}
+
+.content__image-overlayplayer__songtitle {
+    @include mobile {
+        line-height: 3rem;
+    }
+
+    @include tablet {
+        line-height: 5rem;
+        font-family: 'Avner-demi';
+        font-weight: 700;
+        font-size: 5rem;
+    }
+
+    @include desktop {
+        line-height: 6rem;
+    }
+}
+
+.soundcloud__player {
+    @include media(tablet, desktop) {
+        max-width: 700px;
+    }
+}
+
+.content__image-overlayplayer__textcontent {
+    height: max-content;
+}
+
+.content__image-overlayplayer {
+    @include mobile {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        // transform: translate(-50%, -50%);
+        color: white;
+        font-family: 'Avner-demi';
+        padding-left: 0.5rem;
+        width: 90%;
+        height: 90%;
+        z-index: 1;
+        pointer-events: none;
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        font-weight: 43.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    @include tablet {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        // transform: translate(-50%, -50%);
+        color: white;
+        font-family: "Avner-demi";
+        padding-left: 0.5rem;
+        width: 90%;
+        height: 90%;
+        z-index: 1;
+        pointer-events: none;
+        font-size: 3.5rem;
+        line-height: 2.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    @include desktop {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        // transform: translate(-50%, -50%);
+        color: white;
+        font-family: "Avner-demi";
+        padding-left: 0.5rem;
+        width: 90%;
+        height: 90%;
+        z-index: 1;
+        pointer-events: none;
+        font-size: 5.5rem;
+        line-height: 2.75rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .content__image-overlayplayer__textcontent {
+            width: 50%;
+        }
+
+        iframe {
+            width: 50%;
+            max-height: 250px;
+        }
+    }
+}
+
+
+.shows-list {
+    position: relative;
+    background-color: $White;
+    padding: 3rem 0 1.5rem;
+
+    @include desktop {
+        padding: 2rem 0rem;
+        margin: 0 6%;
+    }
+}
+
+.shows-list__title {
+
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    font-family: 'Avner-demi';
+    padding: 0 1.5rem;
+
+    @include desktop {
+        font-size: 3.25rem;
+    }
+}
+
+.shows-list__container {
+    @include mobile {
+        display: block;
+    }
+
+    @include media(tablet, desktop) {
+        display: none;
+    }
+}
+
+.shows-list__container__card {
+    padding: 1.5rem;
+    border-bottom: 1px solid $Silver;
+    font-family: 'Avner-reg';
+}
+
+.shows-list__container__card__element {
+    padding: 0.5rem 0;
+}
+
+.shows-list__container__card__element__title {
+    font-weight: 600;
+    color: $Silver;
+    font-size: 0.9rem;
+
+}
+
+.shows-list__container__card__element__value {
+    margin: 0.4rem 0;
+    font-size: 1.35rem;
+
+    &.bold {
+        font-family: 'Avner-demi';
+    }
+}
+
+.shows-list__container__card__button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background: $BandSite-DarkBlack;
+    color: $White;
+    font-family: 'Avner-reg';
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.shows-list__container__table__button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background: $BandSite-DarkBlack;
+    color: $White;
+    font-family: 'Avner-reg';
+    font-size: 1.3rem;
+    font-weight: 600;
+    max-width: 200px;
+    float: right;
+}
+
+.shows-list__table {
+    @include mobile {
+        display: none;
+    }
+
+    @include media(tablet, desktop) {
+        display: block;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+        font-family: 'Avner-reg';
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        padding: 0 1.5rem;
+
+        tr {
+            th {
+                padding: 1rem 1rem;
+                color: $Silver;
+            }
+
+            td {
+                padding: 1rem 1rem;
+                font-weight: 600;
+                border-bottom: 1px solid $Mercury;
+
+                &.bold {
+                    font-family: 'Avner-demi';
+                }
+            }
+
+            &.active {
+                background-color: $Mercury;
+
+                &:hover {
+                    background-color: $Mercury;
+                }
+            }
+
+            &:hover {
+                background-color: $Alabaster;
+            }
+        }
+    }
+}
+
+
+.footer {
+    position: relative;
+    font-family: 'Avner-reg';
+    bottom: 0;
+    width: 100%;
+    background-color: #323232;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left;
+
+    .footer_mobile {
+        @include desktop {
+            display: none;
+        }
+    }
+}
+
+.footer__email {
+    color: white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        color: white;
+
+    }
+}
+
+.footer__title {
+    font-family: 'Avner-demi';
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    padding: 1rem 0rem;
+}
+
+.footer__title--slim {
+    font-family: 'Avner-reg';
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    padding: 0.5rem 0rem;
+}
+
+.footer__subheading {
+    font-family: 'Avner-demi';
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    padding: 0.5rem 0rem;
+}
+
+.footer__subheading--info {
+    font-family: 'Avner-reg';
+    font-size: 0.875rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    padding: 0.5rem 0rem;
+}
+
+.socials_logos {
+    list-style-type: none;
+    padding: 1rem 0rem;
+
+    li {
+        display: inline-flex;
+        margin-right: 2.5rem;
+    }
+
+    .facebook {
+        width: 1.3rem;
+    }
+
+    .instagram {
+        width: 2rem;
+    }
+
+    .twitter {
+        width: 2.5rem
+    }
+}
+
+
+.footer_desktop {
+    @include mobile {
+        display: none;
+    }
+
+    @include desktop {
+        display: flex;
+
+        .git_text {
+            font-size: 3.25rem;
+        }
+
+        .section_footer {
+            padding: 2rem;
+
+            .ele_2 {
+                padding-top: 2rem;
+                font-weight: bold;
+            }
+
+            .ele_3 {
+                padding-top: 2rem;
+            }
+
+            .ele_4 {
+                padding-top: 2rem;
+            }
+        }
+
+    }
+
+}
+
+.footer_logo {
+    @include desktop {
+        padding: 2rem 0 0 2rem;
+    }
+
+    @include mobile {
+        // display: none;
+    }
+}
+
+.copy-write-desktop {
+    @include desktop {
+        padding: 2rem;
+    }
+
+    @include mobile {
+        display: none;
+    }
+}

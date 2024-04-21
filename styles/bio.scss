@@ -27,7 +27,8 @@
   height: auto;
 
 
-  &::before, &::after {
+  &::before,
+  &::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,26 +38,88 @@
   }
 }
 
+.sectionHeader {
+  @include mobile {
+    font-family: 'Avner-bold';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  @include media(tablet, desktop) {
+    font-family: 'Avner-reg';
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+
+  @include mobile {
+    height: 36px;
+    width: 36px;
+  }
+
+  @include media(desktop, tablet) {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.buttonText {
+  font-family: 'Avner-bold';
+
+  @include mobile {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  @include media(tablet, desktop) {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+
+.labelText {
+  font-family: 'Avner-bold';
+
+  @include mobile {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  @include media(tablet, desktop) {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
 
 /* HEADER SECTION  */
 .header {
 
   @include mobile {
-  
-  text-align: center;
-  background-color: #323232;
-  padding: 1rem;
-  background-size: cover;
-  background-position: center;
 
-  img {
-    width: 10rem;
-  }
+    text-align: center;
+    background-color: $BandSite-Black;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+
+    img {
+      width: 10rem;
+    }
   }
 
   @include desktop {
     display: none;
   }
+
   @include tablet {
     display: none;
   }
@@ -66,18 +129,18 @@
 /* NAVIGATION SECTION  */
 
 .navigator .navigator__list {
-
   @include mobile {
     display: flex;
     text-align: center;
     padding: 1.5rem 1.5rem 0rem;
-    background-color: #323232;
+    background-color: $BandSite-Black;
     list-style: none;
     display: flex;
     padding: 0rem;
     align-items: center;
     font-family: 'Avner-reg';
     justify-content: space-between;
+
     .mobile_logo_img {
       display: none;
     }
@@ -87,20 +150,27 @@
     list-style-type: none;
     margin: 0;
     display: flex;
-    padding: 2rem;
-    background-color: #323232;
+    // padding: 2rem;
+    background-color: $BandSite-Black;
+    height: 90px;
+    align-items: center;
   }
 }
 
 .navigator__item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
   @include mobile {
     align-items: center;
     flex: 1;
   }
 
   @include tablet {
-    // margin-left: 7rem;
-    img { 
+    margin-right: 1rem;
+
+    img {
       padding: 0rem 4rem;
       width: 18.75rem;
     }
@@ -108,6 +178,10 @@
 }
 
 .navigator__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
   @include mobile {
     display: block;
     color: white;
@@ -120,22 +194,22 @@
     border-bottom: 3px solid transparent;
     margin-bottom: 0rem;
   }
-  
+
   @include tablet {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: normal;
     opacity: 0.5;
-    padding: 0 1rem;
+    margin: 0 1rem;
     font-family: 'Avner-reg';
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus,
+  &.active {
     font-weight: bold;
-
     border-bottom: 3px solid white;
-
     opacity: 1;
   }
 }
@@ -153,6 +227,87 @@
   background-color: rgba(0, 0, 0, 1);
 
   /* Semi-transparent black */
+
+}
+
+.content__image-overlayplayer__bandname {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Avner-reg';
+}
+
+.content__image-overlayplayer__songtitle {
+  @include mobile {
+    line-height: 3rem;
+  }
+
+  @include tablet {
+    line-height: 6rem;
+  }
+
+  @include desktop {
+    line-height: 6rem;
+  }
+}
+
+.content__image-overlayplayer {
+  @include mobile {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    // transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Avner-demi';
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    // transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 3.5rem;
+    line-height: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    // transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 5.5rem;
+    line-height: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
 .content__image-overlaytext {
@@ -211,9 +366,11 @@
   font-size: 1.5rem;
   padding: 1.5rem;
   font-family: 'Avner-demi';
+
   @include desktop {
     .band_image {
       text-align: center;
+
       img {
         width: 75%;
       }
@@ -222,25 +379,21 @@
 }
 
 .content__description--title {
-  
-  @include mobile { 
+  @extend .sectionHeader;
+
+  @include mobile {
     padding: 1rem 0rem;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 43.75rem;
   }
 
   @include desktop {
     padding: 2rem 5%;
-    font-size: 3.25rem;
-    line-height: 2.75rem;
   }
 }
 
 .content__description--cite {
   padding: 1rem 0rem;
   line-height: 1.6;
-  font-style: normal; 
+  font-style: normal;
   margin: 1rem 0;
 }
 
@@ -249,7 +402,7 @@
   @include mobile {
     font-family: 'Avner-demi';
     padding: 1rem 0rem;
-    line-height: 1.6; 
+    line-height: 1.6;
     margin: 1rem 0;
   }
 
@@ -259,9 +412,10 @@
     line-height: 1.6;
     margin: 1rem 0;
     padding: 0 12%;
-    
+
     p {
       margin-top: 1rem;
+
       cite {
         font-style: normal;
         font-family: "Avner-reg";
@@ -275,28 +429,31 @@
   @include mobile {
     padding: 1rem 0rem;
   }
-  
+
   @include desktop {
     padding: 2rem 12%;
+
     .content_desc_band {
       display: flex;
+
       p {
         padding: 0 0.5rem;
       }
     }
   }
+
   .bees_knees_p {
     font-size: 3rem;
     font-weight: bold;
   }
-  
-  line-height: 1.4; 
+
+  line-height: 1.4;
   font-family: 'Avner-reg';
 }
 
 .gallery-section {
   position: relative;
-  background-color: #FAFAFA;
+  background-color: $Alabaster;
 
   @include desktop {
     padding: 0rem 0rem;
@@ -313,34 +470,31 @@
       filter: grayscale(100%);
       transition: filter 0.3s ease;
     }
-    img:hover{
+
+    img:hover {
       filter: grayscale(0%);
     }
   }
 
   @include desktop {
     .image_wrapper {
+
       // display: flex;
       img {
         padding: 0.5rem;
         width: 30%;
       }
+
       text-align: center;
     }
   }
 }
 
 .gallery-section__title {
-  padding: 1rem 0rem;
-  position: relative;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-  font-weight: 43.75rem;
+  @extend .sectionHeader;
   padding: 1.5rem;
-  font-family: 'Avner-demi';
 
   @include desktop {
-    font-size: 3.25rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-left: 5%;
@@ -351,12 +505,149 @@
   padding: 1rem 0rem;
 }
 
+
+.comments-section {
+  position: relative;
+  background-color: $White;
+  padding: 1.5rem;
+
+  @include desktop {
+    padding: 2rem 0rem;
+    margin: 0 6%;
+  }
+}
+
+.comments-section__content {
+  font-size: 1.1rem;
+
+  hr {
+    margin: 1.5rem;
+  }
+}
+
+.comments-section__content__card {
+  display: flex;
+  margin: 1.5rem 0;
+  border-top: 1px solid $Mercury;
+  padding-top: 1rem;
+
+  &:last-child {
+    border-bottom: 1px solid $Mercury;
+    padding-bottom: 1rem;
+  }
+}
+
+.comments-section__content__info {
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.comments-section__content__info__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.comments-section__content__info__comment {
+  font-family: 'Avner-reg';
+}
+
+.comments-section__content__info__username {
+  font-family: 'Avner-demi';
+}
+
+.comments-section__content__info__timestamp {
+  font-family: 'Avner-reg';
+  color: $Silver;
+}
+
+.comments-section__content__profile {
+  span {
+    display: block;
+    background-color: $Mercury;
+    @extend .avatar;
+  }
+}
+
+.comments-section__form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.comments-section__form__content {
+  width: 100%;
+  margin-left: 1.5rem;
+}
+
+.comments-section__form,
+.comments-section__content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comments-section__form__field {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  input,
+  textarea {
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 1px solid $Mercury;
+    background: $Alabaster;
+    font-size: 1rem;
+    font-family: 'Avner-reg';
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-family: 'Avner-reg';
+    color: $Silver;
+    margin: 0.3rem 0;
+    font-weight: 600;
+  }
+}
+
+.comments-section__form__profile__image {
+  background: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  margin-top: 3rem;
+  @extend .avatar;
+}
+
+.comments-section__form__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  background: $BandSite-Black;
+  color: $White;
+  font-family: 'Avner-reg';
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  @include tablet {
+    max-width: 200px;
+    float: right;
+  }
+
+  @include desktop {
+    max-width: 200px;
+    float: right;
+  }
+}
+
+.comments-section__title {
+  @extend .sectionHeader;
+}
+
 .footer {
   position: relative;
   font-family: 'Avner-reg';
   bottom: 0;
   width: 100%;
-  background-color: #323232;
+  background-color: $BandSite-Black;
   color: white;
   padding: 1rem 2rem;
   text-align: left;
@@ -372,7 +663,8 @@
   color: white;
   text-decoration: none;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     text-decoration: none;
 
     color: white;
@@ -420,7 +712,7 @@
     display: inline-flex;
     margin-right: 2.5rem;
   }
-  
+
   .facebook {
     width: 1.3rem;
   }
@@ -439,15 +731,17 @@
   @include mobile {
     display: none;
   }
-  
+
   @include desktop {
     display: flex;
+
     .git_text {
       font-size: 3.25rem;
     }
 
     .section_footer {
       padding: 2rem;
+
       .ele_2 {
         padding-top: 2rem;
         font-weight: bold;
@@ -456,22 +750,32 @@
       .ele_3 {
         padding-top: 2rem;
       }
+
       .ele_4 {
         padding-top: 2rem;
       }
     }
-    
+
   }
 
+}
+
+.footer_logo {
+  @include desktop {
+    padding: 2rem 0 0 2rem;
+  }
+
+  @include mobile {
+    // display: none;
+  }
 }
 
 .copy-write-desktop {
   @include desktop {
     padding: 2rem;
   }
+
   @include mobile {
     display: none;
   }
 }
-
-
