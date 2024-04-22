@@ -110,7 +110,7 @@
         margin-right: 1rem;
 
         img {
-            padding: 0rem 4rem;
+            padding: 2rem 4rem;
             width: 18.75rem;
         }
     }
@@ -160,9 +160,7 @@
     width: 100%;
 
     display: block;
-    opacity: 0.85;
-
-    /* 0.5 opacity doesn't match with the wireframe for mobile/desktop temple */
+    opacity: 0.90;
     background-color: $BandSite-DarkBlack;
 
     /* Semi-transparent black */
@@ -513,6 +511,31 @@
         display: none;
     }
 
+    @include tablet {
+        display: flex;
+
+        .git_text {
+            font-size: 3.25rem;
+        }
+
+        .section_footer {
+            padding: 2rem;
+
+            .ele_2 {
+                padding-top: 2rem;
+                font-weight: bold;
+            }
+
+            .ele_3 {
+                padding-top: 2rem;
+            }
+
+            .ele_4 {
+                padding-top: 2rem;
+            }
+        }
+    }
+    
     @include desktop {
         display: flex;
 
@@ -536,9 +559,7 @@
                 padding-top: 2rem;
             }
         }
-
     }
-
 }
 
 .footer_logo {
@@ -546,6 +567,9 @@
         padding: 2rem 0 0 2rem;
     }
 
+    @include tablet { 
+        padding: 2rem 0 0 2rem;
+    }
     @include mobile {
         // display: none;
     }
@@ -553,6 +577,10 @@
 
 .copy-write-desktop {
     @include desktop {
+        padding: 2rem;
+    }
+
+    @include tablet {
         padding: 2rem;
     }
 

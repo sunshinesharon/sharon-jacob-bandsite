@@ -93,7 +93,7 @@
     margin-right: 1rem;
   }
   .navigator__item img {
-    padding: 0rem 4rem;
+    padding: 2rem 4rem;
     width: 18.75rem;
   }
 }
@@ -139,8 +139,7 @@
   position: relative;
   width: 100%;
   display: block;
-  opacity: 0.85;
-  /* 0.5 opacity doesn't match with the wireframe for mobile/desktop temple */
+  opacity: 0.9;
   background-color: #000000;
   /* Semi-transparent black */
 }
@@ -493,6 +492,27 @@
     display: none;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer_desktop {
+    display: flex;
+  }
+  .footer_desktop .git_text {
+    font-size: 3.25rem;
+  }
+  .footer_desktop .section_footer {
+    padding: 2rem;
+  }
+  .footer_desktop .section_footer .ele_2 {
+    padding-top: 2rem;
+    font-weight: bold;
+  }
+  .footer_desktop .section_footer .ele_3 {
+    padding-top: 2rem;
+  }
+  .footer_desktop .section_footer .ele_4 {
+    padding-top: 2rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .footer_desktop {
     display: flex;
@@ -520,7 +540,17 @@
     padding: 2rem 0 0 2rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer_logo {
+    padding: 2rem 0 0 2rem;
+  }
+}
 @media screen and (min-width: 1024px) {
+  .copy-write-desktop {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .copy-write-desktop {
     padding: 2rem;
   }
