@@ -7,21 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite</title>
     <link rel="stylesheet" href="./styles/bio.css">
-    <script src="./scripts/index-page.js" defer></script>
 </head>
 
 <body>
 
     <header class="header">
+        <a href="#biography">
         <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo" class="header__responsive-image" />
+    </a>
     </header>
 
     <nav class="navigator">
         <ul class="navigator__list">
             <li class="navigator__item mobile_logo_img">
+                <a href="#biography">
                 <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo">
+                </a>
             </li>
-            <li class="navigator__item"><a href="#biography" class="navigator__link">Biography</a></li>
+            <li class="navigator__item"><a href="#" class="navigator__link active">Biography</a></li>
             <li class="navigator__item"><a href="./pages/shows.html" class="navigator__link">Shows</a></li>
         </ul>
     </nav>
@@ -99,8 +102,8 @@
     </section>
 
     <section class="comments-section">
-        <h2 class="comments-section_title">Join the Conversation</h2>
-        <form class="comments-section_form" id="comment-form"> 
+        <h2 class="comments-section__title">Join the Conversation</h2>
+        <form class="comments-section__form" id="comment-form">
             <div class="comments-section__form__profile">
                 <div class="comments-section__form__profile__image"></div>
                 <!-- <img src="./assets/images/Mohan-muruge.jpg" class="comments-section__form__profile__image" alt="comment-user-logo"> -->
@@ -114,10 +117,10 @@
                     <label for="email">COMMENT</label>
                     <textarea rows="4" type="text" id="comment-text" name="commentText" required placeholder="Add a new comment"></textarea>
                 </div>
-                <input type="submit" value="COMMENT" class="comments-section_form_button">
+                <input type="submit" value="COMMENT" class="comments-section__form__button">
             </div>
         </form>
-        <div class="comments-section_content" id="comments-ontainer">
+        <div class="comments-section__content" id="comments-container">
             <hr>
             <!-- <div class="comments-section__content__card">
                 <div class="comments-section__content__profile">
@@ -130,7 +133,7 @@
                     </div>
                     <p class="comments-section__content__info__comment">dcwckmnvrw</p>
                 </div>
-                </div> -->
+            </div> -->
         </div>
     </section>
 
@@ -156,7 +159,7 @@
                     </a>
                 </li>
             </ul>
-    
+
             <h3 class="footer__subheading">The Bees Knees Management</h3>
             <p>
                 503 Broadway Penthouse, <br>
@@ -164,12 +167,12 @@
             </p>
             <br>
             <a href="mailto:info@thebeesknees.com" class="footer__email">info@thebeesknees.com</a><br><br>
-    
-    
+
+
             <h3 class="footer__subheading">Limitless Artist Group</h3>
             <p class="footer__subheading--info">Booking Agent for US / South America / Japan</p>
             <a href="mailto:bookings@limitlessag.com" class="footer__email">bookings@limitlessag.com</a><br><br>
-    
+
             <h3 class="footer__subheading">ARCH Entertainment</h3>
             <p class="footer__subheading--info">Booking Agent for UK / EU / AU</p>
             <a href="mailto:bookings@archentertainment.com" class="footer__email">bookings@archentertainment.com</a><br>
@@ -223,8 +226,7 @@
         </div>
     </footer>
 
-
-
+    <script src="./scripts/index-page.js"></script>
 </body>
 
 </html>

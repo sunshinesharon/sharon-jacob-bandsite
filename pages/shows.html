@@ -6,32 +6,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite</title>
-    <link rel="stylesheet" href="../styles/bio.css">
-    <script src="../scripts/build-shows-page.js" defer></script>
+    <link rel="stylesheet" href="../styles/shows.css">
 </head>
 
 <body>
 
     <header class="header">
+        <a href="../index.html">
         <img src="../assets/logos/Logo-bandsite.svg" alt="BandSite Logo" class="header__responsive-image" />
+    </a>
     </header>
 
     <nav class="navigator">
         <ul class="navigator__list">
             <li class="navigator__item mobile_logo_img">
+                <a href="../index.html">
                 <img src="../assets/logos/Logo-bandsite.svg" alt="BandSite Logo">
+                </a>
             </li>
             <li class="navigator__item"><a href="../index.html" class="navigator__link">Biography</a></li>
             <li class="navigator__item"><a href="#" class="navigator__link active">Shows</a></li>
         </ul>
     </nav>
 
-    <section class="content__image">
+    <section class="content__image__container">
         <!-- <h1 class="content__title">The Bees Knees</h1> -->
         <div class="content__image-overlayplayer">
-            <p class="content__image-overlayplayer__bandname">The Chainsmokers</p>
-            <p class="content__image-overlayplayer__songtitle">Something just like this</p>
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+            <div class="content__image-overlayplayer__textcontent">
+                <p class="content__image-overlayplayer__bandname">The Chainsmokers</p>
+                <p class="content__image-overlayplayer__songtitle">Something just like this</p>
+            </div>
+            <iframe class="soundcloud__player" width="100%" height="300" scrolling="no" frameborder="no"
+                allow="autoplay"
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/313627932&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
         </div>
         <img src="../assets/images/hero-shows.jpg" alt="hero-bio" class="content__image" />
@@ -56,6 +62,28 @@
                 </div>
                 <button class="shows-list__container__card__button">BUY TICKETS</button>
             </div> -->
+        </div>
+        <div class="shows-list__table" id="shows-table">
+            <!-- <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Venue</th>
+                    <th>Location</th>
+                    <th></th>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="bold">Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td><button class="shows-list__container__table__button">BUY TICKETS</button></td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="bold">Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td><button class="shows-list__container__table__button">BUY TICKETS</button></td>
+                </tr>
+            </table> -->
         </div>
     </section>
 
@@ -148,6 +176,7 @@
         </div>
     </footer>
 
+    <script src="../scripts/build-shows-page.js"></script>
 </body>
 
 </html>
