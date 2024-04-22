@@ -25,7 +25,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .sectionHeader, .comments-section__title, .gallery-section__title, .content__description--title {
+  .sectionHeader, .comments-section__title, .gallery-section__title {
     font-family: "Avner-bold";
     font-size: 24px;
     line-height: 32px;
@@ -33,7 +33,7 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .sectionHeader, .comments-section__title, .gallery-section__title, .content__description--title {
+  .sectionHeader, .comments-section__title, .gallery-section__title {
     font-family: "Avner-reg";
     font-size: 36px;
     line-height: 44px;
@@ -41,7 +41,7 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .sectionHeader, .comments-section__title, .gallery-section__title, .content__description--title {
+  .sectionHeader, .comments-section__title, .gallery-section__title {
     font-family: "Avner-reg";
     font-size: 36px;
     line-height: 44px;
@@ -391,11 +391,16 @@
 @media screen and (max-width: 767px) {
   .content__description--title {
     padding: 1rem 0rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .content__description--title {
     padding: 2rem 5%;
+    font-size: 3.25rem;
+    line-height: 2.75rem;
   }
 }
 

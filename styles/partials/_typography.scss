@@ -1,0 +1,33 @@
+@use './variables' as vars;
+
+@font-face {
+    font-family: 'Avner-reg';
+    src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format("opentype");
+    font-family: vars.$font-family-regular;
+  
+  }
+  
+  @font-face {
+    font-family: 'Avner-bold';
+    src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format("opentype");
+    font-family: vars.$font-family-bold;
+  
+  }
+  
+  @font-face {
+    font-family: 'Avner-demi';
+    src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format("opentype");
+    font-family: vars.$font-family-demi;
+  }
+
+@mixin font-regular {
+  font-family: vars.$font-family-regular;
+}
+
+@mixin font-demi {
+  font-family: vars.$font-family-demi;
+}
+
+@mixin font-bold {
+  font-family: vars.$font-family-bold;
+}
