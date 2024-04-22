@@ -1,0 +1,564 @@
+@font-face {
+  font-family: "Avner-reg";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Avner-bold";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Avner-demi";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+
+/* HEADER SECTION  */
+@media screen and (max-width: 767px) {
+  .header {
+    text-align: center;
+    background-color: #323232;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+  .header img {
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: none;
+  }
+}
+
+/* NAVIGATION SECTION  */
+@media screen and (max-width: 767px) {
+  .navigator .navigator__list {
+    display: flex;
+    text-align: center;
+    padding: 1.5rem 1.5rem 0rem;
+    background-color: #323232;
+    list-style: none;
+    display: flex;
+    padding: 0rem;
+    align-items: center;
+    font-family: "Avner-reg";
+    justify-content: space-between;
+  }
+  .navigator .navigator__list .mobile_logo_img {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigator .navigator__list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    background-color: #323232;
+    height: 90px;
+    align-items: center;
+  }
+}
+
+.navigator__item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .navigator__item {
+    align-items: center;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigator__item {
+    margin-right: 1rem;
+  }
+  .navigator__item img {
+    padding: 2rem 4rem;
+    width: 18.75rem;
+  }
+}
+
+.navigator__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .navigator__link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.5;
+    padding: 0.5rem;
+    transition: font-weight 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigator__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.5;
+    margin: 0 1rem;
+    font-family: "Avner-reg";
+  }
+}
+.navigator__link:hover, .navigator__link:focus, .navigator__link.active {
+  font-weight: bold;
+  border-bottom: 3px solid white;
+  opacity: 1;
+}
+
+/* CONTENT SECTION  */
+.content__image {
+  position: relative;
+  width: 100%;
+  display: block;
+  opacity: 0.9;
+  background-color: #000000;
+  filter: brightness(50%);
+}
+
+.content__image__container {
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .content__image__container {
+    max-height: 90vh;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content__image-overlayplayer__bandname {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Avner-reg";
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__image-overlayplayer__bandname {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "Avner-demi";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__image-overlayplayer__bandname {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "Avner-demi";
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content__image-overlayplayer__songtitle {
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__image-overlayplayer__songtitle {
+    line-height: 5rem;
+    font-family: "Avner-demi";
+    font-weight: 700;
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__image-overlayplayer__songtitle {
+    line-height: 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .soundcloud__player {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .soundcloud__player {
+    max-width: 700px;
+  }
+}
+
+.content__image-overlayplayer__textcontent {
+  height: max-content;
+}
+
+@media screen and (max-width: 767px) {
+  .content__image-overlayplayer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    font-weight: 43.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__image-overlayplayer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 3.5rem;
+    line-height: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__image-overlayplayer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-family: "Avner-demi";
+    padding-left: 0.5rem;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    font-size: 5.5rem;
+    line-height: 2.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .content__image-overlayplayer .content__image-overlayplayer__textcontent {
+    width: 50%;
+  }
+  .content__image-overlayplayer iframe {
+    width: 50%;
+    max-height: 250px;
+  }
+}
+
+.shows-list {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 3rem 0 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .shows-list {
+    padding: 2rem 0rem;
+    margin: 0 6%;
+  }
+}
+
+.shows-list__title {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  font-family: "Avner-demi";
+  padding: 0 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .shows-list__title {
+    font-size: 3.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .shows-list__container {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows-list__container {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows-list__container {
+    display: none;
+  }
+}
+
+.shows-list__container__card {
+  padding: 1.5rem;
+  border-bottom: 1px solid #AFAFAF;
+  font-family: "Avner-reg";
+}
+
+.shows-list__container__card__element {
+  padding: 0.5rem 0;
+}
+
+.shows-list__container__card__element__title {
+  font-weight: 600;
+  color: #AFAFAF;
+  font-size: 0.9rem;
+}
+
+.shows-list__container__card__element__value {
+  margin: 0.4rem 0;
+  font-size: 1.35rem;
+}
+.shows-list__container__card__element__value.bold {
+  font-family: "Avner-demi";
+}
+
+.shows-list__container__card__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #000000;
+  color: #FFFFFF;
+  font-family: "Avner-reg";
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.shows-list__container__table__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #000000;
+  color: #FFFFFF;
+  font-family: "Avner-reg";
+  font-size: 1.3rem;
+  font-weight: 600;
+  max-width: 200px;
+  float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .shows-list__table {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows-list__table {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows-list__table {
+    display: block;
+  }
+}
+.shows-list__table table {
+  width: 100%;
+  text-align: left;
+  font-family: "Avner-reg";
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 0 1.5rem;
+}
+.shows-list__table table tr th {
+  padding: 1rem 1rem;
+  color: #AFAFAF;
+}
+.shows-list__table table tr td {
+  padding: 1rem 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #E1E1E1;
+}
+.shows-list__table table tr td.bold {
+  font-family: "Avner-demi";
+}
+.shows-list__table table tr.active {
+  background-color: #E1E1E1;
+}
+.shows-list__table table tr.active:hover {
+  background-color: #E1E1E1;
+}
+.shows-list__table table tr:hover {
+  background-color: #FAFAFA;
+}
+
+.footer {
+  position: relative;
+  font-family: "Avner-reg";
+  bottom: 0;
+  width: 100%;
+  background-color: #323232;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+@media screen and (min-width: 1024px) {
+  .footer .footer_mobile {
+    display: none;
+  }
+}
+
+.footer__email {
+  color: white;
+  text-decoration: none;
+}
+.footer__email:hover, .footer__email:focus {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__title {
+  font-family: "Avner-demi";
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 1rem 0rem;
+}
+
+.footer__title--slim {
+  font-family: "Avner-reg";
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 0.5rem 0rem;
+}
+
+.footer__subheading {
+  font-family: "Avner-demi";
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 0.5rem 0rem;
+}
+
+.footer__subheading--info {
+  font-family: "Avner-reg";
+  font-size: 0.875rem;
+  line-height: 2.75rem;
+  font-weight: 43.75rem;
+  padding: 0.5rem 0rem;
+}
+
+.socials_logos {
+  list-style-type: none;
+  padding: 1rem 0rem;
+}
+.socials_logos li {
+  display: inline-flex;
+  margin-right: 2.5rem;
+}
+.socials_logos .facebook {
+  width: 1.3rem;
+}
+.socials_logos .instagram {
+  width: 2rem;
+}
+.socials_logos .twitter {
+  width: 2.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .footer_desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer_desktop {
+    display: flex;
+  }
+  .footer_desktop .git_text {
+    font-size: 3.25rem;
+  }
+  .footer_desktop .section_footer {
+    padding: 2rem;
+  }
+  .footer_desktop .section_footer .ele_2 {
+    padding-top: 2rem;
+    font-weight: bold;
+  }
+  .footer_desktop .section_footer .ele_3 {
+    padding-top: 2rem;
+  }
+  .footer_desktop .section_footer .ele_4 {
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer_desktop {
+    display: flex;
+  }
+  .footer_desktop .git_text {
+    font-size: 3.25rem;
+  }
+  .footer_desktop .section_footer {
+    padding: 2rem;
+  }
+  .footer_desktop .section_footer .ele_2 {
+    padding-top: 2rem;
+    font-weight: bold;
+  }
+  .footer_desktop .section_footer .ele_3 {
+    padding-top: 2rem;
+  }
+  .footer_desktop .section_footer .ele_4 {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer_logo {
+    padding: 2rem 0 0 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer_logo {
+    padding: 2rem 0 0 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .copy-write-desktop {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .copy-write-desktop {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .copy-write-desktop {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=shows.css.map */
