@@ -141,7 +141,7 @@
   display: block;
   opacity: 0.9;
   background-color: #000000;
-  /* Semi-transparent black */
+  filter: brightness(50%);
 }
 
 .content__image__container {
