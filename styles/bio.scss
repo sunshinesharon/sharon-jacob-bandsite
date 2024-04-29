@@ -535,6 +535,12 @@
     border-bottom: 1px solid $Mercury;
     padding-bottom: 1rem;
   }
+
+  &:hover {
+    .comments-section__content__info__additionalbuttons__deletebutton {
+      display: block;
+    }
+  }
 }
 
 .comments-section__content__info {
@@ -640,6 +646,25 @@
 
 .comments-section__title {
   @extend .sectionHeader;
+}
+
+.comments-section__content__info__additionalbuttons {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-section__content__info__additionalbuttons__likes {
+  color: $Silver;
+  cursor: pointer;
+}
+
+.comments-section__content__info__additionalbuttons__deletebutton {
+  border: none;
+  cursor: pointer;
+  background: $White;
+  color: red;
+  display: none;
 }
 
 .footer {
@@ -748,7 +773,7 @@
 
       .ele_2 {
         padding-top: 2rem;
-        font-weight: bold;
+        font-weight: 300;
       }
 
       .ele_3 {
@@ -756,6 +781,10 @@
       }
 
       .ele_4 {
+        padding-top: 2rem;
+      }
+
+      .ele_5 {
         padding-top: 2rem;
       }
     }
@@ -774,7 +803,7 @@
 
       .ele_2 {
         padding-top: 2rem;
-        font-weight: bold;
+        font-weight: 500;
       }
 
       .ele_3 {
@@ -782,6 +811,9 @@
       }
 
       .ele_4 {
+        padding-top: 2rem;
+      }
+      .ele_5 {
         padding-top: 2rem;
       }
     }

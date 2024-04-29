@@ -425,13 +425,17 @@
     width: 100%;
     background-color: #323232;
     color: white;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     text-align: left;
 
     .footer_mobile {
         @include desktop {
             display: none;
         }
+
+        @include tablet {
+            display: none;
+          }
     }
 }
 
@@ -520,7 +524,7 @@
 
             .ele_2 {
                 padding-top: 2rem;
-                font-weight: bold;
+                font-weight: 300;
             }
 
             .ele_3 {
@@ -528,6 +532,9 @@
             }
 
             .ele_4 {
+                padding-top: 2rem;
+            }
+            .ele_5 {
                 padding-top: 2rem;
             }
         }
@@ -545,7 +552,7 @@
 
             .ele_2 {
                 padding-top: 2rem;
-                font-weight: bold;
+                font-weight: 300;
             }
 
             .ele_3 {
@@ -555,6 +562,9 @@
             .ele_4 {
                 padding-top: 2rem;
             }
+            .ele_5 {
+                padding-top: 2rem;
+              }
         }
     }
 }

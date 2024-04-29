@@ -1,36 +1,8 @@
-let showsList = [
-    {
-        date: 1682381644429,
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 1710070020992,
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 1687437739965,
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 1704643560308,
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 1695782193678,
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 1707456935363,
-        venue: 'Press Club',
-        location: 'San Francisco, CA'
-    }
-];
+import BandSiteApi from "./band-site-api.js";
 
+let showsList = [];
+const apiKey = 'cab19056-57d0-447a-ad67-f1df60f708e8';
+const api = new BandSiteApi(apiKey);
 let formatTimestamp = (timestamp) => {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     const date = new Date(timestamp);
@@ -42,6 +14,11 @@ let formatTimestamp = (timestamp) => {
 }
 
 let renderShowsCards = (arr) => {
+    const showsHeading = document.createElement('h2');
+    showsHeading.textContent = 'Shows';
+    showsHeading.className = 'shows-list__title'
+    const showsSection = document.getElementById('shows-list__section');
+    showsSection.insertBefore(showsHeading, showsSection.firstChild);
     const showsContainer = document.getElementById('shows-container');
     showsContainer.innerHTML = "";
     arr.forEach(item => {
@@ -64,7 +41,7 @@ let renderShowsCards = (arr) => {
         venueTitle.textContent = 'VENUE';
         venueTitle.className = 'shows-list__container__card__element__title';
         const venueValue = document.createElement('p');
-        venueValue.textContent = item.venue;
+        venueValue.textContent = item.place;
         venueValue.className = 'shows-list__container__card__element__value';
         venueElem.appendChild(venueTitle);
         venueElem.appendChild(venueValue);
@@ -92,8 +69,6 @@ let renderShowsTable = (arr) => {
     const showsTable = document.getElementById('shows-table');
     showsTable.innerHTML = '';
     const table = document.createElement('table');
-    table.cellPadding = 0;
-    table.cellSpacing = 0;
     table.id = 'shows-list-table';
     const headingRow = table.insertRow();
     const dateHeading = headingRow.insertCell(0);
@@ -110,7 +85,7 @@ let renderShowsTable = (arr) => {
         dateValue.textContent = formatTimestamp(item.date);
         dateValue.className = 'bold';
         const venueValue = newRow.insertCell(1);
-        venueValue.textContent = item.venue;
+        venueValue.textContent = item.place;
         const locationValue = newRow.insertCell(2);
         locationValue.textContent = item.location;
         const buyTicketButtonValue = newRow.insertCell(3);
@@ -121,21 +96,27 @@ let renderShowsTable = (arr) => {
     })
     showsTable.appendChild(table);
 
-    const activeRow = (row)=>{
+    const activeRow = (row) => {
         const tableRows = document.querySelectorAll('#shows-list-table tr');
-        tableRows.forEach((tr)=>{
+        tableRows.forEach((tr) => {
             tr.classList.remove('active');
         })
         row.classList.add('active');
     }
 
     const tableRows = document.querySelectorAll('#shows-list-table tr');
-    tableRows.forEach((row)=>{
-        row.addEventListener('click', ()=>{
+    tableRows.forEach((row) => {
+        row.addEventListener('click', () => {
             activeRow(row)
         })
     })
 }
+let getShows = () => {
+    api.getShows().then((shows) => {
+        showsList = shows;
+        renderShowsCards(showsList);
+        renderShowsTable(showsList);
+    })
+}
 
-renderShowsCards(showsList);
-renderShowsTable(showsList);
+getShows();
