@@ -537,6 +537,12 @@
   }
 }
 
+&:hover {
+  .comments-section__content__info__additionalbuttons__deletebutton {
+    display: block;
+  }
+}
+
 .comments-section__content__info {
   margin-left: 1rem;
   width: 100%;
@@ -640,6 +646,25 @@
 
 .comments-section__title {
   @extend .sectionHeader;
+}
+
+.comments-section__content__info__additionalbuttons {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-section__content__info__additionalbuttons__likes {
+  color: $Silver;
+  cursor: pointer;
+}
+
+.comments-section__content__info__additionalbuttons__deletebutton {
+  border: none;
+  cursor: pointer;
+  background: $White;
+  color: red;
+  display: none;
 }
 
 .footer {
