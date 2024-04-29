@@ -753,12 +753,15 @@
   }
   .footer_desktop .section_footer .ele_2 {
     padding-top: 2rem;
-    font-weight: bold;
+    font-weight: 300;
   }
   .footer_desktop .section_footer .ele_3 {
     padding-top: 2rem;
   }
   .footer_desktop .section_footer .ele_4 {
+    padding-top: 2rem;
+  }
+  .footer_desktop .section_footer .ele_5 {
     padding-top: 2rem;
   }
 }
@@ -774,12 +777,15 @@
   }
   .footer_desktop .section_footer .ele_2 {
     padding-top: 2rem;
-    font-weight: bold;
+    font-weight: 500;
   }
   .footer_desktop .section_footer .ele_3 {
     padding-top: 2rem;
   }
   .footer_desktop .section_footer .ele_4 {
+    padding-top: 2rem;
+  }
+  .footer_desktop .section_footer .ele_5 {
     padding-top: 2rem;
   }
 }

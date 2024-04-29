@@ -432,6 +432,10 @@
         @include desktop {
             display: none;
         }
+
+        @include tablet {
+            display: none;
+          }
     }
 }
 
