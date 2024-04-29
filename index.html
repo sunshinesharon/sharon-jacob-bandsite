@@ -12,17 +12,14 @@
 <body>
 
     <header class="header">
-        <a href="#biography">
         <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo" class="header__responsive-image" />
-    </a>
     </header>
 
     <nav class="navigator">
         <ul class="navigator__list">
             <li class="navigator__item mobile_logo_img">
-                <a href="#biography">
+                <a href = "index.html"/>
                 <img src="./assets/logos/Logo-bandsite.svg" alt="BandSite Logo">
-                </a>
             </li>
             <li class="navigator__item"><a href="#" class="navigator__link active">Biography</a></li>
             <li class="navigator__item"><a href="./pages/shows.html" class="navigator__link">Shows</a></li>
@@ -30,10 +27,8 @@
     </nav>
 
     <section class="content__image">
-        <!-- <h1 class="content__title">The Bees Knees</h1> -->
-        <div class="content__image-overlaytext">The Bees Knees</div>
+        <h1 class="content__image-overlaytext">The Bees Knees</h1>
         <img src="./assets/images/hero-bio.jpg" alt="hero-bio" class="content__image" />
-        <!-- <h1 class="content__image-overlaytext">The Bees Knees</h1> -->
     </section>
 
     <section class="content__description">
@@ -106,23 +101,22 @@
         <form class="comments-section__form" id="comment-form">
             <div class="comments-section__form__profile">
                 <div class="comments-section__form__profile__image"></div>
-                <!-- <img src="./assets/images/Mohan-muruge.jpg" class="comments-section__form__profile__image" alt="comment-user-logo"> -->
             </div>
             <div class="comments-section__form__content">
                 <div class="comments-section__form__field">
-                    <label for="name">NAME</label>
+                    <label for="comment-name">NAME</label>
                     <input type="text" id="comment-name" name="name" required placeholder="Enter your name">
                 </div>
                 <div class="comments-section__form__field">
-                    <label for="email">COMMENT</label>
-                    <textarea rows="4" type="text" id="comment-text" name="commentText" required placeholder="Add a new comment"></textarea>
+                    <label for="comment-text">COMMENT</label>
+                    <textarea type="text" id="comment-text" name="commentText" required placeholder="Add a new comment"></textarea>
                 </div>
                 <input type="submit" value="COMMENT" class="comments-section__form__button">
             </div>
         </form>
         <div class="comments-section__content" id="comments-container">
             <hr>
-            <!-- <div class="comments-section__content__card">
+            <div class="comments-section__content__card">
                 <div class="comments-section__content__profile">
                     <span></span>
                 </div>
@@ -132,8 +126,12 @@
                         <p class="comments-section__content__info__timestamp"> 12 Mar 2020</p>
                     </div>
                     <p class="comments-section__content__info__comment">dcwckmnvrw</p>
+                    <div class="comments-section__content__info__additionalbuttons">
+                        <p class="comments-section__content__info__additionalbuttons__likes">1 Like</p>
+                        <button class="comments-section__content__info__additionalbuttons__deletebutton">Delete Comment</button>
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
 
@@ -190,22 +188,23 @@
                 <p class="ele_2">The Bees Knees Management</p>
                 <p class="ele_3">503 Broadway Penthouse, <br>New York, NY 10012, USA</p>
                 <p class="ele_4">info@thebeesknees.com</p>
+                <p class="ele_5">Copyright The Bees Knees © 2023 All Rights Reserved</p>
             </div>
             <div class="section_footer">
                 <div>
                     <ul class="socials_logos">
                         <li>
-                            <a href="">
+                            <a href="https://www.instagram.com/">
                                 <img src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram" class="instagram">
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://www.facebook.com/">
                                 <img src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook" class="facebook">
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://twitter.com/">
                                 <img src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter" class="twitter">
                             </a>
                         </li>
@@ -218,15 +217,15 @@
             <div class="section_footer">
                 <div class="footer_logo">
                     <img src="./assets/logos/Logo-bandsite.svg" alt="footer-logo">
-                </div>
-                <div class="copy-write-desktop">
-                    Copyright The Bees Knees © 2023 All Rights Reserved
+                    <p class="ele_2">ARCH Entertainment</p>
+                    <p class="ele_3">Booking Agent for <br>UK / EU / AU</p>
+                    <p class="ele_4">bookings@archentertainment.com</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="./scripts/index-page.js"></script>
+    <script type="module" src="./scripts/index-page.js"></script>
 </body>
 
 </html>
