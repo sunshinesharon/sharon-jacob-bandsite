@@ -422,7 +422,7 @@
 
   @include tablet {
     font-family: 'Avner-demi';
-    padding: 1rem 0rem;
+    padding: 0 10%;
     line-height: 1.6;
     margin: 1rem 0;
 
@@ -827,6 +827,10 @@
     display: flex;
     }
 
+    .git_text {
+      font-size: 3.25rem;
+    }
+    
     .section_footer {
       padding: 2rem;
 
