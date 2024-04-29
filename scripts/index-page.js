@@ -4,9 +4,8 @@ let formatTimestamp = (timestamp) => {
     const currentTime = new Date(); // Current time
     const targetTime = new Date(timestamp); // Timestamp to format
 
-    const elapsed = currentTime - targetTime; // Time difference in milliseconds
+    const elapsed = currentTime - targetTime;
 
-    // Convert milliseconds to seconds, minutes, hours, and days
     const seconds = Math.floor(elapsed / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
