@@ -535,11 +535,11 @@
     border-bottom: 1px solid $Mercury;
     padding-bottom: 1rem;
   }
-}
 
-&:hover {
-  .comments-section__content__info__additionalbuttons__deletebutton {
-    display: block;
+  &:hover {
+    .comments-section__content__info__additionalbuttons__deletebutton {
+      display: block;
+    }
   }
 }
 

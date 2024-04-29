@@ -536,6 +536,9 @@
   border-bottom: 1px solid #E1E1E1;
   padding-bottom: 1rem;
 }
+.comments-section__content__card:hover .comments-section__content__info__additionalbuttons__deletebutton {
+  display: block;
+}
 
 .comments-section__content__info {
   margin-left: 1rem;
@@ -632,6 +635,25 @@
     max-width: 200px;
     float: right;
   }
+}
+
+.comments-section__content__info__additionalbuttons {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-section__content__info__additionalbuttons__likes {
+  color: #AFAFAF;
+  cursor: pointer;
+}
+
+.comments-section__content__info__additionalbuttons__deletebutton {
+  border: none;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: red;
+  display: none;
 }
 
 .footer {
