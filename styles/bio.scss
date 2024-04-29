@@ -210,6 +210,7 @@
   &.active {
     font-weight: bold;
     border-bottom: 3px solid white;
+    cursor: pointer;
     opacity: 1;
   }
 }
@@ -365,9 +366,17 @@
   @include desktop {
     .band_image {
       text-align: center;
-
       img {
         width: 75%;
+      }
+    }
+  }
+  @include tablet {
+    .band_image {
+      text-align: center;
+      img {
+        width: 80%;
+        height:25%;
       }
     }
   }
@@ -387,6 +396,11 @@
     line-height: 2.75rem;
   }
 
+  @include tablet {
+    padding: 2rem 5%;
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
   
 }
 
@@ -404,6 +418,22 @@
     padding: 1rem 0rem;
     line-height: 1.6;
     margin: 1rem 0;
+  }
+
+  @include tablet {
+    font-family: 'Avner-demi';
+    padding: 0 10%;
+    line-height: 1.6;
+    margin: 1rem 0;
+
+    p {
+      margin-top: 1rem;
+
+      cite {
+        font-style: normal;
+        font-family: "Avner-reg";
+      }
+    }
   }
 
   @include desktop {
@@ -431,6 +461,18 @@
   }
 
   @include desktop {
+    padding: 2rem 12%;
+
+    .content_desc_band {
+      display: flex;
+
+      p {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  @include tablet {
     padding: 2rem 12%;
 
     .content_desc_band {
@@ -473,13 +515,22 @@
 
     img:hover {
       filter: grayscale(0%);
+      cursor: pointer;
     }
   }
 
   @include desktop {
     .image_wrapper {
+      img {
+        padding: 0.5rem;
+        width: 30%;
+      }
 
-      // display: flex;
+      text-align: center;
+    }
+  }
+  @include tablet {
+    .image_wrapper {
       img {
         padding: 0.5rem;
         width: 30%;
@@ -499,6 +550,12 @@
     padding-bottom: 2rem;
     margin-left: 5%;
   }
+
+  @include tablet {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 5%;
+  }
 }
 
 .gallery-photo {
@@ -512,6 +569,10 @@
   padding: 1.5rem;
 
   @include desktop {
+    padding: 2rem 0rem;
+    margin: 0 6%;
+  }
+  @include tablet {
     padding: 2rem 0rem;
     margin: 0 6%;
   }
@@ -539,6 +600,7 @@
   &:hover {
     .comments-section__content__info__additionalbuttons__deletebutton {
       display: block;
+      cursor: pointer;
     }
   }
 }
@@ -614,7 +676,7 @@
     margin: 0.3rem 0;
     font-weight: 600;
   }
-}
+ }
 
 .comments-section__form__profile__image {
   background: url(../assets/images/Mohan-muruge.jpg);
@@ -695,7 +757,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-
+    cursor: pointer;
     color: white;
 
   }
@@ -763,11 +825,12 @@
 
   @include tablet {
     display: flex;
+    }
 
     .git_text {
       font-size: 3.25rem;
     }
-
+    
     .section_footer {
       padding: 2rem;
 
@@ -788,8 +851,6 @@
         padding-top: 2rem;
       }
     }
-
-  }
 
   @include desktop {
     display: flex;
@@ -817,9 +878,7 @@
         padding-top: 2rem;
       }
     }
-
   }
-
 }
 
 .footer_logo {
